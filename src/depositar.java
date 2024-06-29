@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class reportes extends JFrame{
+public class depositar extends JFrame{
     private JPanel panelReportes;
     private JButton volverAlMenuButton;
     private JButton calcularButton;
@@ -10,7 +10,7 @@ public class reportes extends JFrame{
     private JTextField valor2;
     private JTextField resultado;
 
-    public reportes (){
+    public depositar(){
         super("OPCIONES DE MENU");
         setContentPane(panelReportes);
         volverAlMenuButton.addActionListener(new ActionListener() {

@@ -24,7 +24,23 @@ public class menu extends JFrame{
         depositarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                reportes ventana = new reportes();
+                depositar ventana = new depositar();
+                ventana.iniciar();
+                dispose();
+            }
+        });
+        retirarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                retirar ventana = new retirar();
+                ventana.iniciar();
+                dispose();
+            }
+        });
+        verSaldoButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                saldo ventana = new saldo();
                 ventana.iniciar();
                 dispose();
             }
