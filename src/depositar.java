@@ -3,16 +3,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class depositar extends JFrame{
-    private JPanel panelReportes;
+    private JPanel panelDeposito;
     private JButton volverAlMenuButton;
     private JButton calcularButton;
     private JTextField valor1;
-    private JTextField valor2;
-    private JTextField resultado;
 
     public depositar(){
-        super("OPCIONES DE MENU");
-        setContentPane(panelReportes);
+        super("Depositar");
+        setContentPane(panelDeposito);
         volverAlMenuButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -25,9 +23,9 @@ public class depositar extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 int valor = Integer.parseInt(valor1.getText());
-                int valorr = Integer.parseInt(valor2.getText());
-                int result = valor+valorr;
-                resultado.setText(String.valueOf(result));
+                BalanceSaldo.depositar(valor);
+                JOptionPane.showMessageDialog(null,"Se ha realizado el deposito correctamente!");
+                valor1.setText("");
             }
         });
     }
