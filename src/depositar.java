@@ -32,7 +32,7 @@ public class depositar extends JFrame{
     public void iniciar(){
         setVisible(true);
         setLocationRelativeTo(null);
-        setSize(400,500);
+        setSize(400,300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 

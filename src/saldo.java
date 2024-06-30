@@ -33,7 +33,7 @@ public class saldo extends JFrame {
     public void iniciar(){
         setVisible(true);
         setLocationRelativeTo(null);
-        setSize(400,500);
+        setSize(400,200);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 }
