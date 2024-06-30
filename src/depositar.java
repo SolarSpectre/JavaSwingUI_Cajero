@@ -23,9 +23,14 @@ public class depositar extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 int valor = Integer.parseInt(valor1.getText());
-                BalanceSaldo.depositar(valor);
-                JOptionPane.showMessageDialog(null,"Se ha realizado el deposito correctamente!");
-                valor1.setText("");
+                if (valor <= 0){
+                    JOptionPane.showMessageDialog(null,"Ingrese un valor correcto");
+                    valor1.setText("");
+                }else {
+                    BalanceSaldo.depositar(valor);
+                    JOptionPane.showMessageDialog(null, "Se ha realizado el deposito correctamente!");
+                    valor1.setText("");
+                }
             }
         });
     }

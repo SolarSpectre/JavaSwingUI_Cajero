@@ -23,9 +23,14 @@ public class retirar extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int valor = Integer.parseInt(valor1.getText());
-                BalanceSaldo.retirar(valor);
-                JOptionPane.showMessageDialog(null,"Se ha realizado el retiro correctamente!");
-                valor1.setText("");
+                if (valor <= 0){
+                    JOptionPane.showMessageDialog(null,"Ingrese un valor correcto");
+                    valor1.setText("");
+                }else {
+                    BalanceSaldo.retirar(valor);
+                    JOptionPane.showMessageDialog(null, "Se ha realizado el retiro correctamente!");
+                    valor1.setText("");
+                }
             }
         });
     }
