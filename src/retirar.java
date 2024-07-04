@@ -23,7 +23,7 @@ public class retirar extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int valor = Integer.parseInt(valor1.getText());
-                if (valor <= 0){
+                if (valor <= 0 || valor > BalanceSaldo.getSaldo()){
                     JOptionPane.showMessageDialog(null,"Ingrese un valor correcto");
                     valor1.setText("");
                 }else {

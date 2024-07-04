@@ -7,11 +7,14 @@ public class saldo extends JFrame {
     private JLabel saldo;
     private JButton salirButton;
     private JButton regresarAlMenuButton;
-
+    public int saldoIngresado;
     public saldo (){
         super("Saldo");
         setContentPane(panel_saldo);
-        saldo.setText(String.valueOf(BalanceSaldo.getSaldo()));
+
+        saldoIngresado = BalanceSaldo.getSaldo();
+        saldo.setText(String.valueOf(saldoIngresado));
+
         salirButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
